@@ -19,7 +19,9 @@ import results from "../../result";
 
 export default () => {
   const [searchText, setSearchText] = useState("");
-  const [list, setList] = useState(results);
+  const [list, setList] = useState(
+    results.sort((a, b) => (a.nome > b.nome ? 1 : b.nome > a.nome ? -1 : 0))
+  );
 
   useEffect(() => {
     if (searchText === "") {
