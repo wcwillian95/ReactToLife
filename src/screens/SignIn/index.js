@@ -13,6 +13,7 @@ import {
 } from "./styles";
 
 import SignInput from "../../components/SignInput";
+import SignInForm from "../../components/SignInForm";
 
 import { ReactComponent as ReactLogo } from "../../assets/logoLife.svg";
 import { ReactComponent as IconEmail } from "../../assets/email.svg";
@@ -41,24 +42,7 @@ export default () => {
       <ReactLogo width="50" height="50" fill="#268596" />
       <TextLogo>React To Life</TextLogo>
       <InputArea>
-        <SignInput
-          IconSvg={IconEmail}
-          placeholder="Digite seu e-mail"
-          value={emailField}
-          onChangeText={(t) => setEmailField(t)}
-        />
-
-        <SignInput
-          IconSvg={IconLock}
-          placeholder="Digite sua senha"
-          value={passwordField}
-          onChangeText={(t) => setPasswordField(t)}
-          password={true}
-        />
-
-        <CustomButton onPress={handleSignClick}>
-          <CustomButtonText>LOGIN</CustomButtonText>
-        </CustomButton>
+        <SignInForm />
       </InputArea>
 
       <SignMessageButton onPress={handleMessageButtonClick}>

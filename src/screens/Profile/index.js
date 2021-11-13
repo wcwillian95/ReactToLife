@@ -30,7 +30,7 @@ export default () => {
 
       <InputArea>
         <CustomButton onPress={handleSignClick}>
-          <CustomButtonText>Alterar Dados</CustomButtonText>
+          <CustomButtonText>Log Out</CustomButtonText>
         </CustomButton>
       </InputArea>
     </Container>
