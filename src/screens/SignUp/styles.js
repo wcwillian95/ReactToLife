@@ -14,7 +14,7 @@ export const InputArea = styled.View`
 `;
 
 export const TextLogo = styled.Text`
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
 `;
 

@@ -22,7 +22,6 @@ const SignInForm = () => {
           .signInWithEmailAndPassword(email.value, password.value);
         console.log("user", user);
         navigation.navigate("MainTab");
-        alert("Welcome back!");
       }
     } catch (error) {
       console.log("error", error);

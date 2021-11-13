@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import {
   Container,
@@ -9,17 +9,28 @@ import {
   SearchTextCPF
 } from "./styles";
 
-import SignInput from "../../components/SignInput";
-
 import { ReactComponent as AccountIcon } from "../../assets/account.svg";
-import { ReactComponent as SearchIcon } from "../../assets/search.svg";
+
+import getFirebase from "../../firebase";
 
 export default () => {
   const navigation = useNavigation();
 
-  const [searchlField, setSearchField] = useState("");
+  const handleSignClick = () => {
+    const firebaseInstance = getFirebase();
 
-  const handleSignClick = () => {};
+    const signOut = async () => {
+      try {
+        if (firebaseInstance) {
+          await firebaseInstance.auth().signOut();
+          navigation.navigate("SignIn");
+        }
+      } catch (error) {
+        console.log("error", error);
+      }
+    };
+    signOut();
+  };
 
   return (
     <Container>
