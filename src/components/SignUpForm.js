@@ -45,7 +45,7 @@ const FormWrapper = styled.form`
   display: grid;
   justify-content: center;
   gap: 20px;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
 `;
 
 const Title = styled.h1`

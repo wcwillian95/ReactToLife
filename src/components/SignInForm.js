@@ -1,4 +1,3 @@
-import { NavigationContainer } from "@react-navigation/native";
 import React from "react";
 import styled from "styled-components";
 import { useNavigation } from "@react-navigation/native";
@@ -14,17 +13,20 @@ const SignInForm = () => {
 
   const signIn = async (event) => {
     event.preventDefault();
-
-    try {
-      if (firebaseInstance) {
-        const user = await firebaseInstance
-          .auth()
-          .signInWithEmailAndPassword(email.value, password.value);
-        console.log("user", user);
-        navigation.navigate("MainTab");
+    if (!email.value) {
+    } else {
+      try {
+        if (firebaseInstance) {
+          const user = await firebaseInstance
+            .auth()
+            .signInWithEmailAndPassword(email.value, password.value);
+          console.log("user", user);
+          navigation.navigate("MainTab", { paramKey: user.email });
+        }
+      } catch (error) {
+        console.log("error", error);
+        alert("Usuário não identificado");
       }
-    } catch (error) {
-      console.log("error", error);
     }
   };
 
@@ -42,19 +44,9 @@ export default SignInForm;
 const FormWrapper = styled.form`
   display: grid;
   justify-content: center;
+  align-items: center;
   gap: 20px;
   padding-bottom: 50px;
-`;
-
-const Title = styled.h1`
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 40px;
-  line-height: 48px;
-  color: #000;
-  text-align: center;
 `;
 
 const Input = styled.input`
