@@ -11,35 +11,24 @@ import {
   SearchTextCPF
 } from "./styles";
 
-import SignInput from "../../components/SignInput";
+import results from "../../result";
 
-import userPerson from "../../assets/person.svg";
-
-export default () => {
+export default ({ route }) => {
   const navigation = useNavigation();
 
   const [searchlField, setSearchField] = useState("");
+  let nome;
 
-  const handleSignClick = () => {};
+  const handleSignClick = () => {
+    nome = results.filter((item) => item.id.indexOf(route.params.paramKey));
+  };
 
   return (
     <Container>
-      <Image
-        style={{ width: 100, height: 100 }}
-        source={{
-          uri: userPerson
-        }}
-      />
-      <SearchTextName>Nome Completo</SearchTextName>
+      <SearchTextName>Nome:{nome}</SearchTextName>
       <SearchTextCPF>123.456.789-10</SearchTextCPF>
 
       <InputArea>
-        <SignInput
-          placeholder="Pesquisar"
-          value={searchlField}
-          onChangeText={(t) => setSearchField(t)}
-        />
-
         <CustomButton onPress={handleSignClick}>
           <CustomButtonText>PESQUISAR</CustomButtonText>
         </CustomButton>

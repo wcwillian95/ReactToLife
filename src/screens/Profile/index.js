@@ -13,6 +13,8 @@ import { ReactComponent as AccountIcon } from "../../assets/account.svg";
 
 import getFirebase from "../../firebase";
 
+import result from "../../result";
+
 export default () => {
   const navigation = useNavigation();
 
@@ -36,7 +38,7 @@ export default () => {
     <Container>
       <AccountIcon width="100" height="100" fill="#268596" />
 
-      <SearchTextName>Nome Completo</SearchTextName>
+      <SearchTextName>Nome</SearchTextName>
       <SearchTextCPF>123.456.789-10</SearchTextCPF>
 
       <InputArea>

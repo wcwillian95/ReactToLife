@@ -1,9 +1,17 @@
 import React from "react";
+import { useNavigation } from "@react-navigation/native";
 import { TouchableOpacity, View, Image, Text, StyleSheet } from "react-native";
 
 const ListItem = ({ data }) => {
+  const navigation = useNavigation();
+
+  const Trocatela = () => {
+    navigation.navigate("infoDoenca", { paramKey: data.id });
+    console.log(data.id);
+  };
+
   return (
-    <TouchableOpacity style={styles.item}>
+    <TouchableOpacity style={styles.item} onPress={Trocatela}>
       <View style={styles.itemInfo}>
         <Text style={styles.itemP1}>{data.nome}</Text>
       </View>

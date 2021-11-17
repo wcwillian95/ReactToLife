@@ -8,7 +8,6 @@ import {
   SearchView,
   SearchTextInput
 } from "./styles";
-import { Text } from "react-native";
 
 import { ReactComponent as SearchIcon } from "../../assets/search.svg";
 import { ReactComponent as LogoIcon } from "../../assets/logoLife.svg";

@@ -12,7 +12,7 @@ const Stack = createStackNavigator();
 
 export default () => (
   <Stack.Navigator
-    initialRouteName="Preload"
+    initialRouteName="MainTab"
     screenOptions={{
       headerShown: false
     }}
