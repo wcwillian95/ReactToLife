@@ -17,9 +17,10 @@ import ListItem from "../../components/ListItem";
 import results from "../../result";
 
 export default () => {
+  let listResults = results;
   const [searchText, setSearchText] = useState("");
   const [list, setList] = useState(
-    results.sort((a, b) => (a.nome > b.nome ? 1 : b.nome > a.nome ? -1 : 0))
+    listResults.sort((a, b) => (a.nome > b.nome ? 1 : b.nome > a.nome ? -1 : 0))
   );
 
   useEffect(() => {
