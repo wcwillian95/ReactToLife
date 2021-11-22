@@ -24,7 +24,16 @@ export default [
       "Tome sol." +
       "Evite cheiros fortes." +
       "Tome a vacina da gripe." +
+      "Não fume." +
+      "A doença pode ser desencadeada pelo clima, poeira doméstica, pelos de animais, fumaça, gripes ou resfriados.\n" +
+      "Por não ter uma causa aparente, é possível controlar as crises e até prevenir que elas aconteçam com algumas medidas simples:\n" +
+      "Mantenha o ambiente limpo." +
+      "Evite acúmulo de sujeira ou poeira." +
+      "Tome sol." +
+      "Evite cheiros fortes." +
+      "Tome a vacina da gripe." +
       "Não fume.",
+
     cuidados: "cuidados",
     tratamento: "tratamento",
     medicamentos: "medicamento"

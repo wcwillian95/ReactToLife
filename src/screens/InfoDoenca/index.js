@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import { useState, useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 import {
   Container,
@@ -11,7 +12,8 @@ import {
   BackArrowButton,
   LogoArea,
   InfoViewArea,
-  InfoViewText
+  InfoViewText,
+  InfoViewScroll
 } from "./styles";
 
 import results from "../../results2";
@@ -23,25 +25,26 @@ export default ({ route }) => {
 
   const idDoenca = route.params.paramKey;
 
-  var textoInfo = "";
+  let [infoText, SetInfoText] = useState("Teste");
 
   const handleBackButton = () => {
     navigation.goBack();
-    textoInfo = "";
   };
-  const handleClickPrev = () => {
-    textoInfo = results[idDoenca - 1].prevencao;
 
-    console.log(results[idDoenca - 1].prevencao);
+  const handleClickPrev = () => {
+    SetInfoText(results[idDoenca - 1].prevencao);
   };
+
   const handleClickSint = () => {
-    textoInfo = results[idDoenca - 1].sintoma;
+    SetInfoText(results[idDoenca - 1].sintoma);
   };
+
   const handleClickSobre = () => {
-    textoInfo = results[idDoenca - 1].sobre;
+    SetInfoText(results[idDoenca - 1].sobre);
   };
+
   const handleClickTrat = () => {
-    textoInfo = results[idDoenca - 1].tratamento;
+    SetInfoText(results[idDoenca - 1].tratamento);
   };
 
   return (
@@ -50,7 +53,7 @@ export default ({ route }) => {
       <InputArea>
         <InputContainerRight>
           <CustomButton onPress={handleClickPrev}>
-            <CustomButtonText>Prevençoes</CustomButtonText>
+            <CustomButtonText>Prevenções</CustomButtonText>
           </CustomButton>
           <CustomButton onPress={handleClickSint}>
             <CustomButtonText>Sintomas</CustomButtonText>
@@ -67,7 +70,9 @@ export default ({ route }) => {
       </InputArea>
 
       <InfoViewArea>
-        <InfoViewText>{textoInfo}teste</InfoViewText>
+        <InfoViewScroll>
+          <InfoViewText>{infoText}</InfoViewText>
+        </InfoViewScroll>
       </InfoViewArea>
 
       <LogoArea>

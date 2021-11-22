@@ -44,17 +44,19 @@ export const SearchTextCPF = styled.Text`
 `;
 
 export const InputContainerLeft = styled.View`
-  width: 70%;
+  width: 65%;
 `;
 export const InputContainerRight = styled.View`
-  width: 70%;
+  width: 65%;
 `;
+
 export const LogoArea = styled.View`
   width: 34px;
   position: absolute;
   top: 10px;
   right: 10px;
 `;
+
 export const BackArrowButton = styled.TouchableOpacity`
   width: 60px;
   height: 50px;
@@ -66,10 +68,23 @@ export const BackArrowButton = styled.TouchableOpacity`
 `;
 
 export const InfoViewArea = styled.View`
-  flex: 1;
-  top: -100px;
+  flex: 4;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 95%;
+  margin: 10px;
+  top: -10px;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
 `;
 
-export const InfoViewText = styled.Text`
+export const InfoViewScroll = styled.ScrollView`
+  flex: 1;
+  padding: 20px;
+`;
+
+export let InfoViewText = styled.Text`
   font-size: 20px;
+  margin: 10px;
 `;
