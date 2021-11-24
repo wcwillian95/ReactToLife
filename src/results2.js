@@ -19,19 +19,19 @@ export default [
     prevencao:
       "A doença pode ser desencadeada pelo clima, poeira doméstica, pelos de animais, fumaça, gripes ou resfriados.\n" +
       "Por não ter uma causa aparente, é possível controlar as crises e até prevenir que elas aconteçam com algumas medidas simples:\n" +
-      "Mantenha o ambiente limpo." +
-      "Evite acúmulo de sujeira ou poeira." +
-      "Tome sol." +
-      "Evite cheiros fortes." +
-      "Tome a vacina da gripe." +
-      "Não fume." +
+      "Mantenha o ambiente limpo.\n" +
+      "Evite acúmulo de sujeira ou poeira.\n" +
+      "Tome sol.\n" +
+      "Evite cheiros fortes.\n" +
+      "Tome a vacina da gripe.\n" +
+      "Não fume.\n" +
       "A doença pode ser desencadeada pelo clima, poeira doméstica, pelos de animais, fumaça, gripes ou resfriados.\n" +
       "Por não ter uma causa aparente, é possível controlar as crises e até prevenir que elas aconteçam com algumas medidas simples:\n" +
-      "Mantenha o ambiente limpo." +
-      "Evite acúmulo de sujeira ou poeira." +
-      "Tome sol." +
-      "Evite cheiros fortes." +
-      "Tome a vacina da gripe." +
+      "Mantenha o ambiente limpo.\n" +
+      "Evite acúmulo de sujeira ou poeira.\n" +
+      "Tome sol.\n" +
+      "Evite cheiros fortes.\n" +
+      "Tome a vacina da gripe.\n" +
       "Não fume.",
 
     cuidados: "cuidados",

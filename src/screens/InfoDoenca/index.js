@@ -25,26 +25,28 @@ export default ({ route }) => {
 
   const idDoenca = route.params.paramKey;
 
-  let [infoText, SetInfoText] = useState("Teste");
+  let [infoText, SetInfoText] = useState(
+    "Sobre:\n" + results[idDoenca - 1].sobre
+  );
 
   const handleBackButton = () => {
     navigation.goBack();
   };
 
   const handleClickPrev = () => {
-    SetInfoText(results[idDoenca - 1].prevencao);
+    SetInfoText("Prevenção:\n" + results[idDoenca - 1].prevencao);
   };
 
   const handleClickSint = () => {
-    SetInfoText(results[idDoenca - 1].sintoma);
+    SetInfoText("Sintomas:\n" + results[idDoenca - 1].sintoma);
   };
 
   const handleClickSobre = () => {
-    SetInfoText(results[idDoenca - 1].sobre);
+    SetInfoText("Sobre:\n" + results[idDoenca - 1].sobre);
   };
 
   const handleClickTrat = () => {
-    SetInfoText(results[idDoenca - 1].tratamento);
+    SetInfoText("Tratamentos:\n" + results[idDoenca - 1].tratamento);
   };
 
   return (

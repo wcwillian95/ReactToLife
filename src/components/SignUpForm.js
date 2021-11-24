@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { useNavigation } from "@react-navigation/native";
 
@@ -9,23 +9,28 @@ const SignUpForm = () => {
   const firebaseInstance = getFirebase();
   const email = useInput("");
   const password = useInput("");
+  const repassword = useInput("");
   const navigation = useNavigation();
 
   const signUp = async (event) => {
     event.preventDefault();
 
-    try {
-      if (firebaseInstance) {
-        const user = await firebaseInstance
-          .auth()
-          .createUserWithEmailAndPassword(email.value, password.value);
-        navigation.navigate("SignIn");
-        console.log("user", user);
-        alert(`Welcome ${email.value}!`);
+    if (password.value !== repassword.value) {
+      alert("Senhas não conferem!");
+    } else {
+      try {
+        if (firebaseInstance) {
+          const user = await firebaseInstance
+            .auth()
+            .createUserWithEmailAndPassword(email.value, password.value);
+          navigation.navigate("SignIn");
+          console.log("user", user);
+          alert(`Welcome ${email.value}!`);
+        }
+      } catch (error) {
+        console.log("error", error);
+        alert(error.message);
       }
-    } catch (error) {
-      console.log("error", error);
-      alert(error.message);
     }
   };
 
@@ -34,6 +39,7 @@ const SignUpForm = () => {
       <Title>Cadastro</Title>
       <Input placeholder="E-mail" {...email} />
       <Input placeholder="Senha" type="password" {...password} />
+      <Input placeholder="Confirme a senha" type="password" {...repassword} />
       <Button type="submit">Cadastrar</Button>
     </FormWrapper>
   );

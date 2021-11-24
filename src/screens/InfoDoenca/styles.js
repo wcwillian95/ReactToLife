@@ -85,6 +85,6 @@ export const InfoViewScroll = styled.ScrollView`
 `;
 
 export let InfoViewText = styled.Text`
-  font-size: 20px;
+  font-size: 16px;
   margin: 10px;
 `;
