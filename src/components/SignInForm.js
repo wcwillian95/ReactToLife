@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { useNavigation } from "@react-navigation/native";
 
 import getFirebase from "../firebase";
 import useInput from "./useInput";
+import usuario from "../user";
 
 const SignInForm = () => {
   const firebaseInstance = getFirebase();
   const email = useInput("");
   const password = useInput("");
   const navigation = useNavigation();
+  const [userText, SetUserText] = useState(usuario);
 
   const signIn = async (event) => {
     event.preventDefault();
@@ -20,8 +22,9 @@ const SignInForm = () => {
           const user = await firebaseInstance
             .auth()
             .signInWithEmailAndPassword(email.value, password.value);
-          console.log("user", user);
-          navigation.navigate("MainTab", { paramKey: user.email });
+          //console.log("user", user);
+          userText.email = email.value;
+          navigation.navigate("MainTab");
         }
       } catch (error) {
         console.log("error", error);

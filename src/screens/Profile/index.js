@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import {
   Container,
@@ -13,7 +13,7 @@ import { ReactComponent as AccountIcon } from "../../assets/account.svg";
 
 import getFirebase from "../../firebase";
 
-import result from "../../result";
+import usuario from "../../user";
 
 export default () => {
   const navigation = useNavigation();
@@ -38,8 +38,8 @@ export default () => {
     <Container>
       <AccountIcon width="100" height="100" fill="#268596" />
 
-      <SearchTextName>Nome</SearchTextName>
-      <SearchTextCPF>123.456.789-10</SearchTextCPF>
+      <SearchTextName>{usuario.nome}</SearchTextName>
+      <SearchTextCPF>{usuario.email}</SearchTextCPF>
 
       <InputArea>
         <CustomButton onPress={handleSignClick}>

@@ -41,7 +41,11 @@ export default [
   {
     id: 3,
     nome: "Hipertensão",
-    sobre: "sobre",
+    sobre:
+      "Condição em que a força do sangue contra a parede das artérias é muito grande.\n" +
+      "Normalmente, a hipertensão é definida como a pressão arterial acima de 14/9 e é considerada grave quando a pressão está acima de 18/12.\n" +
+      "Em geral, a pressão arterial elevada não tem sintomas. Ao longo do tempo, se não for tratada, poderá causar problemas de saúde, como doenças cardíacas e acidente vascular cerebral.\n" +
+      "Adotar uma dieta saudável com menos sal, praticar exercícios físicos regularmente e tomar medicamentos pode ajudar a baixar a pressão arterial.",
     sintoma: "sintoma",
     prevencao: "prevencao",
     cuidados: "cuidados",
@@ -51,7 +55,11 @@ export default [
   {
     id: 4,
     nome: "Osteoporose",
-    sobre: "sobre",
+    sobre:
+      "Condição na qual os ossos se tornam frágeis e quebradiços.\n" +
+      "O corpo absorve e substitui o tecido ósseo constantemente. Na osteoporose, a nova criação óssea não acompanha a remoção da camada óssea anterior.\n" +
+      "Muitas pessoas não apresentam sintomas até que tenham uma fratura óssea.\n" +
+      "O tratamento inclui medicamentos, dieta saudável e exercício de levantamento de peso para ajudar a prevenir a perda óssea ou fortalecer os ossos já fracos.",
     sintoma: "sintoma",
     prevencao: "prevencao",
     cuidados: "cuidados",
@@ -61,7 +69,11 @@ export default [
   {
     id: 5,
     nome: "Mal de Parkinson",
-    sobre: "sobre",
+    sobre:
+      "Um distúrbio do sistema nervoso central que afeta o movimento, muitas vezes incluindo tremores.\n" +
+      "Danos às células nervosas do cérebro fazem com que os níveis de dopamina caiam, causando os sintomas de Parkinson.\n" +
+      "Geralmente, o mal de Parkinson começa com um tremor na mão. Outros sintomas são movimento lento, rigidez e perda de equilíbrio.\n" +
+      "Medicamentos podem ajudar a controlar os sintomas de Parkinson.",
     sintoma: "sintoma",
     prevencao: "prevencao",
     cuidados: "cuidados",
@@ -91,7 +103,8 @@ export default [
   {
     id: 8,
     nome: "Cancer",
-    sobre: "sobre",
+    sobre:
+      "Câncer é um termo que abrange mais de 100 diferentes tipos de doenças malignas que têm em comum o crescimento desordenado de células, que podem invadir tecidos adjacentes ou órgãos a distância.",
     sintoma: "sintoma",
     prevencao: "prevencao",
     cuidados: "cuidados",
@@ -131,7 +144,8 @@ export default [
   {
     id: 12,
     nome: "Cancer de próstata",
-    sobre: "sobre",
+    sobre:
+      "Câncer é um termo que abrange mais de 100 diferentes tipos de doenças malignas que têm em comum o crescimento desordenado de células, que podem invadir tecidos adjacentes ou órgãos a distância.",
     sintoma: "sintoma",
     prevencao: "prevencao",
     cuidados: "cuidados",
@@ -141,7 +155,8 @@ export default [
   {
     id: 13,
     nome: "Cancer de mama",
-    sobre: "sobre",
+    sobre:
+      "Câncer é um termo que abrange mais de 100 diferentes tipos de doenças malignas que têm em comum o crescimento desordenado de células, que podem invadir tecidos adjacentes ou órgãos a distância.",
     sintoma: "sintoma",
     prevencao: "prevencao",
     cuidados: "cuidados",
@@ -151,7 +166,10 @@ export default [
   {
     id: 14,
     nome: "Aids",
-    sobre: "sobre",
+    sobre:
+      "O vírus pode ser transmitido pelo contato com sangue, sêmen ou fluidos vaginais infectados.\n" +
+      "Algumas semanas depois da infecção pelo HIV, podem ocorrer sintomas semelhantes aos da gripe, como febre, dor de garganta e fadiga. A doença costuma ser assintomática até evoluir para AIDS. Os sintomas da AIDS incluem perda de peso, febre ou sudorese noturna, fadiga e infecções recorrentes.\n" +
+      "Não existe cura para a AIDS, mas uma adesão estrita aos regimes antirretrovirais (ARVs) pode retardar significativamente o progresso da doença, bem como prevenir infecções secundárias e complicações.",
     sintoma: "sintoma",
     prevencao: "prevencao",
     cuidados: "cuidados",
@@ -171,7 +189,10 @@ export default [
   {
     id: 16,
     nome: "AVC",
-    sobre: "sobre",
+    sobre:
+      "Um acidente vascular cerebral é uma emergência médica.\n" +
+      "Os sintomas de acidente vascular cerebral incluem dificuldade para andar, falar e compreender, bem como paralisia ou dormência da face, do braço ou da perna.\n" +
+      "O tratamento precoce com medicamentos como tPA (anticoagulante) pode minimizar danos cerebrais. Outros tratamentos concentram-se em limitar complicações e prevenir mais acidentes vasculares cerebrais.",
     sintoma: "sintoma",
     prevencao: "prevencao",
     cuidados: "cuidados",
@@ -181,7 +202,11 @@ export default [
   {
     id: 17,
     nome: "Obesidade",
-    sobre: "sobre",
+    sobre:
+      "Distúrbio que envolve excesso de gordura corporal, aumentando o risco de problemas de saúde.\n" +
+      "Geralmente, a obesidade resulta da ingestão de mais calorias do que as calorias queimadas por exercícios físicos e atividades diárias normais.\n" +
+      "Uma pessoa está obesa quando o índice de massa corporal (IMC) dela é de 30 ou mais. O sintoma principal é o excesso de gordura corporal, o que aumenta o risco de problemas de saúde graves.\n" +
+      "A base do tratamento são mudanças no estilo de vida, como dieta e exercícios.",
     sintoma: "sintoma",
     prevencao: "prevencao",
     cuidados: "cuidados",
