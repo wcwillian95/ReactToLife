@@ -11,14 +11,7 @@ export default () => {
 
   useEffect(() => {
     const checkToken = async () => {
-      const token = await AsyncStorage.getItem("token");
-
-      if (token) {
-        // validar o token
-      } else {
-        // navegar para tela SignIn
-        navigation.navigate("SignIn");
-      }
+      navigation.navigate("SignIn");
     };
     setTimeout(() => {
       checkToken();

@@ -34,9 +34,23 @@ export default [
       "Tome a vacina da gripe.\n" +
       "Não fume.",
 
-    cuidados: "cuidados",
-    tratamento: "tratamento",
-    medicamentos: "medicamento"
+    cuidados:
+      "Faça um teste para alergias.\n" +
+      "Não trate apenas a crise.\n" +
+      "Aposte na higiene.\n" +
+      "Evite cheiros fortes.\n" +
+      "Invista na vacina da gripe.\n" +
+      "Entre em forma.\n" +
+      "Cuidado com a medicação.",
+    tratamento:
+      "O tratamento é feito por meio de cuidados individuais e do uso de broncodilatadores\n " +
+      "A asma geralmente pode ser controlada com inaladores de resgate, que tratam os sintomas, e inaladores de controle (esteroides), que os previnem. Os casos graves podem exigir inaladores de ação prolongada que mantêm as vias aéreas abertas, bem como esteroides orais",
+    medicamentos:
+      "1. Broncodilatadores inalatórios de ação longa\n" +
+      "Os broncodilatadores são remédios que dilatam os brônquios dos pulmões facilitando a entrada de ar. Para o tratamento a longo prazo, aqueles que são indicados são os broncodilatadores de ação longa, que exercem um efeito por cerca de 12 horas.\n" +
+      "Alguns exemplos de broncodilatadores inalatórios de ação prolongada são o salmeterol e o formoterol, que devem ser usados em associação a um corticoide. Estes remédios não devem ser usados durante uma crise de asma.\n" +
+      "2. Corticoides inalatórios\n" +
+      "Os corticoides têm uma ação anti-inflamatória, que reduz a inflamação crônica presente nos pulmões do asmático. Estes devem ser usados diariamente para o controle da asma e prevenção da crise asmática."
   },
   {
     id: 3,

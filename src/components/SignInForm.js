@@ -24,6 +24,7 @@ const SignInForm = () => {
             .signInWithEmailAndPassword(email.value, password.value);
           //console.log("user", user);
           userText.email = email.value;
+          password.value = "";
           navigation.navigate("MainTab");
         }
       } catch (error) {
@@ -51,7 +52,6 @@ const FormWrapper = styled.form`
   gap: 20px;
   padding-bottom: 50px;
 `;
-
 const Input = styled.input`
   background: rgba(255, 255, 255, 0.2);
   border-radius: 30px;
@@ -66,7 +66,6 @@ const Input = styled.input`
     outline: none;
   }
 `;
-
 const Button = styled.button`
   background: linear-gradient(91.4deg, #2fb8ff 0%, #9eecd9 100%);
   padding: 12px 0;

@@ -1,11 +1,14 @@
 import React from "react";
-import { Container } from "./styles";
-import { Text } from "react-native";
+import { Container, TextLogo } from "./styles";
+
+import { ReactComponent as ReactAtom } from "../../assets/atom_editor.svg";
 
 export default () => {
   return (
     <Container>
-      <Text>Favorites</Text>
+      <ReactAtom width="100" height="100" fill="#268596" />
+
+      <TextLogo>Favoritos</TextLogo>
     </Container>
   );
 };
